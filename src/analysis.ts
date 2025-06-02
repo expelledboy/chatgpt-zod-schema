@@ -1,12 +1,5 @@
-import fs from 'fs'
 import { createHash } from 'crypto'
-
-// env sourced via .env.defaults (direnv)
-const filePath =
-  process.env.CHATGPT_CONVERSATION_FILE ||
-  './data/chatgpt-export/conversations.json'
-
-const data = JSON.parse(fs.readFileSync(filePath, 'utf8')) as any
+import data from './data'
 
 type PossibleSchema = {
   count: number

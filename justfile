@@ -9,3 +9,6 @@ data-exists:
 
 analysis:
   bun run src/analysis.ts
+
+test:
+  bun test
