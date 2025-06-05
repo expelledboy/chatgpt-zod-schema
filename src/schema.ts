@@ -6,6 +6,7 @@ export const ContentPartsTypeSchema = z.enum([
   'real_time_user_audio_video_asset_pointer',
   'image_asset_pointer',
   'audio_asset_pointer',
+  'video_container_asset_pointer',
 ])
 
 export const ContentPartMetadataSchema = z.object({
@@ -389,7 +390,7 @@ export const MessageMetadataSchema = z
     timestamp_ms: z.any().optional(),
     is_visually_hidden_from_conversation: z.any().optional(),
     user_context_message_data: z.any().optional(),
-    is_user_system_message: z.any().optional(),
+    is_user_system_message: z.boolean().optional(),
     search_source: z.any().optional(),
     client_reported_search_source: z.any().optional(),
     search_result_groups: z.any().optional(),
